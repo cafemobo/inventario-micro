@@ -1,0 +1,16 @@
+services:
+
+  inventory:
+    git_url: git@github.com:cafemobo/inventario-micro.git
+    git_branch: cafemobo
+    command: npm start
+    build_root: .
+    ports:
+      - container: 8888
+        http: 80
+        https: 443
+    env_vars:
+      NODE_ENV: production
+
+databases:
+  - mongodb
